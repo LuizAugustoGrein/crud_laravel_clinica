@@ -1,6 +1,6 @@
-@extends('especialidades.layout')
+@extends('cargos.layout')
 
-@section('title',__($especialidade->nome_esp . ': CRUD Laravel'))
+@section('title',__($cargo->nome_cargo . ': CRUD Laravel'))
 
 @push('css')
 <style>
@@ -24,8 +24,8 @@ table th{
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span><span class="text-info">{{$especialidade->nome_esp}}</span>: (@lang('CRUD Laravel'))</span>
-                        <a href="{{ url('especialidades') }}" class="btn-info btn-sm">
+                        <span><span class="text-info">{{$cargo->nome_cargo}}</span>: (@lang('CRUD Laravel'))</span>
+                        <a href="{{ url('cargos') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
@@ -42,27 +42,23 @@ table th{
                         <tbody>
                         <tr>
                           <th align="left"><strong>ID:</strong></th>
-                          <th align="left">{{$especialidade->id}}</th>
+                          <th align="left">{{$cargo->id}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Nome da Especialidade')</strong>:</th>
-                            <th align="left">{{$especialidade->nome_esp}}</th>
+                            <th align="left"><strong>@lang('Nome do Convênio')</strong>:</th>
+                            <th align="left">{{$cargo->nome_cargo}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Sigla da Especialidade')</strong>:</th>
-                            <th align="left">{{$especialidade->sigla_esp}}</th>
-                        </tr>
-                        <tr>
-                            <th align="left"><strong>@lang('Observação')</strong>:</th>
-                            <th align="left">{{$especialidade->obs_esp}}</th>
+                            <th align="left"><strong>@lang('Descrição')</strong>:</th>
+                            <th align="left">{{$cargo->desc_cargo}}</th>
                         </tr>
                         <tr>
                             <th align="left"><strong>@lang('Adicionado')</strong>:</th>
-                            <th align="left">{{$especialidade->created_at}}</th>
+                            <th align="left">{{$cargo->created_at}}</th>
                         </tr>
                         <tr>
                             <th align="left"><strong>@lang('Atualizado')</strong>:</th>
-                            <th align="left">{{$especialidade->updated_at}}</th>
+                            <th align="left">{{$cargo->updated_at}}</th>
                         </tr>
                         </table>
                 </div>

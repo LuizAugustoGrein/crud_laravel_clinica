@@ -1,6 +1,6 @@
-@extends('especialidades.layout')
+@extends('consultas.layout')
 
-@section('title',__($especialidade->nome_esp . ': CRUD Laravel'))
+@section('title',__($consulta->id . ': CRUD Laravel'))
 
 @push('css')
 <style>
@@ -24,8 +24,8 @@ table th{
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span><span class="text-info">{{$especialidade->nome_esp}}</span>: (@lang('CRUD Laravel'))</span>
-                        <a href="{{ url('especialidades') }}" class="btn-info btn-sm">
+                        <span><span class="text-info">{{$consulta->id}}</span>: (@lang('CRUD Laravel'))</span>
+                        <a href="{{ url('consultas') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
@@ -42,27 +42,31 @@ table th{
                         <tbody>
                         <tr>
                           <th align="left"><strong>ID:</strong></th>
-                          <th align="left">{{$especialidade->id}}</th>
+                          <th align="left">{{$consulta->id}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Nome da Especialidade')</strong>:</th>
-                            <th align="left">{{$especialidade->nome_esp}}</th>
+                            <th align="left"><strong>@lang('Nome do Paciente')</strong>:</th>
+                            <th align="left">{{$consulta->paciente->nome}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Sigla da Especialidade')</strong>:</th>
-                            <th align="left">{{$especialidade->sigla_esp}}</th>
+                            <th align="left"><strong>@lang('Nome do Médico')</strong>:</th>
+                            <th align="left">{{$consulta->medico->nome}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Observação')</strong>:</th>
-                            <th align="left">{{$especialidade->obs_esp}}</th>
+                            <th align="left"><strong>@lang('Data')</strong>:</th>
+                            <th align="left">{{$consulta->data}}</th>
+                        </tr>
+                        <tr>
+                            <th align="left"><strong>@lang('Hora')</strong>:</th>
+                            <th align="left">{{$consulta->hora}}</th>
                         </tr>
                         <tr>
                             <th align="left"><strong>@lang('Adicionado')</strong>:</th>
-                            <th align="left">{{$especialidade->created_at}}</th>
+                            <th align="left">{{$consulta->created_at}}</th>
                         </tr>
                         <tr>
                             <th align="left"><strong>@lang('Atualizado')</strong>:</th>
-                            <th align="left">{{$especialidade->updated_at}}</th>
+                            <th align="left">{{$consulta->updated_at}}</th>
                         </tr>
                         </table>
                 </div>

@@ -1,6 +1,6 @@
-@extends('especialidades.layout')
+@extends('convenios.layout')
 
-@section('title',__($especialidade->nome_esp . ': CRUD Laravel'))
+@section('title',__($convenio->nome_conv . ': CRUD Laravel'))
 
 @push('css')
 <style>
@@ -24,8 +24,8 @@ table th{
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span><span class="text-info">{{$especialidade->nome_esp}}</span>: (@lang('CRUD Laravel'))</span>
-                        <a href="{{ url('especialidades') }}" class="btn-info btn-sm">
+                        <span><span class="text-info">{{$convenio->nome_conv}}</span>: (@lang('CRUD Laravel'))</span>
+                        <a href="{{ url('convenios') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
@@ -42,27 +42,39 @@ table th{
                         <tbody>
                         <tr>
                           <th align="left"><strong>ID:</strong></th>
-                          <th align="left">{{$especialidade->id}}</th>
+                          <th align="left">{{$convenio->id}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Nome da Especialidade')</strong>:</th>
-                            <th align="left">{{$especialidade->nome_esp}}</th>
+                            <th align="left"><strong>@lang('Nome do Convênio')</strong>:</th>
+                            <th align="left">{{$convenio->nome_conv}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Sigla da Especialidade')</strong>:</th>
-                            <th align="left">{{$especialidade->sigla_esp}}</th>
+                            <th align="left"><strong>@lang('Telefone')</strong>:</th>
+                            <th align="left">{{$convenio->fone_conv}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Observação')</strong>:</th>
-                            <th align="left">{{$especialidade->obs_esp}}</th>
+                            <th align="left"><strong>@lang('Site')</strong>:</th>
+                            <th align="left">{{$convenio->site_conv}}</th>
+                        </tr>
+                        <tr>
+                            <th align="left"><strong>@lang('Contato')</strong>:</th>
+                            <th align="left">{{$convenio->contato_conv}}</th>
+                        </tr>
+                        <tr>
+                            <th align="left"><strong>@lang('Perc Consulta')</strong>:</th>
+                            <th align="left">{{$convenio->perccons_conv}}</th>
+                        </tr>
+                        <tr>
+                            <th align="left"><strong>@lang('Perc Exame')</strong>:</th>
+                            <th align="left">{{$convenio->percexame_conv}}</th>
                         </tr>
                         <tr>
                             <th align="left"><strong>@lang('Adicionado')</strong>:</th>
-                            <th align="left">{{$especialidade->created_at}}</th>
+                            <th align="left">{{$convenio->created_at}}</th>
                         </tr>
                         <tr>
                             <th align="left"><strong>@lang('Atualizado')</strong>:</th>
-                            <th align="left">{{$especialidade->updated_at}}</th>
+                            <th align="left">{{$convenio->updated_at}}</th>
                         </tr>
                         </table>
                 </div>

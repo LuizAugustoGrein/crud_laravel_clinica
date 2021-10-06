@@ -82,7 +82,13 @@
             <div class="content">
                 <div class="title m-b-md">
                     <p>CRUD Clínica</p>
+                    <a style="font-size: 40px; text-decoration: none;" href="/pacientes">Pacientes</a>
+                    <a style="font-size: 40px; text-decoration: none;" href="/medicos">Médicos</a>
+                    <a style="font-size: 40px; text-decoration: none;" href="/consultas">Consultas</a>
                     <a style="font-size: 40px; text-decoration: none;" href="/especialidades">Especialidades</a>
+                    <a style="font-size: 40px; text-decoration: none;" href="/convenios">Convênios</a>
+                    <a style="font-size: 40px; text-decoration: none;" href="/cargos">Cargos</a>
+                    <a style="font-size: 40px; text-decoration: none;" href="/tipoexames">TipoExames</a>
                 </div>
             </div>
         </div>
