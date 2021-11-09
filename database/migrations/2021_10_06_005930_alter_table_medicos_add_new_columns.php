@@ -14,11 +14,21 @@ class AlterTableMedicosAddNewColumns extends Migration
     public function up()
     {
         Schema::table('medicos', function (Blueprint $table) {
-            $table->unsignedBigInteger('pessoa_id')->nullable()->after('id');
-            $table->unsignedBigInteger('especialidade_id')->nullable()->after('pessoa_id');
-            $table->date('dataadmissao_medico')->nullable()->after('especialidade_id');
-            $table->char('ufcrm_medico',2)->nullable()->after('crm_medico');
-            $table->decimal('salario_medico',8,2)->nullable()->after('ufcrm_medico');
+            $table->unsignedBigInteger('pessoa_id')
+                ->nullable()
+                ->after('id');
+            $table->unsignedBigInteger('especialidade_id')
+                ->nullable()
+                ->after('pessoa_id');
+            $table->date('dataadmissao_medico')
+                ->nullable()
+                ->after('especialidade_id');
+            $table->char('ufcrm_medico',2)
+                ->nullable()
+                ->after('crm_medico');
+            $table->decimal('salario_medico',8,2)
+                ->nullable()
+                ->after('ufcrm_medico');
         });
     }
 
